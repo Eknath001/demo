@@ -8,6 +8,6 @@ RUN mvn clean package -DskipTests
 # Use OpenJDK to run the application
 FROM openjdk:24-slim-bullseye
 WORKDIR /app
-COPY --from=build /app/target/demo-project-0.0.1.jar app.jar
+COPY --from=build /app/target/demo-project-0.0.1-SNAPSHOTjar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
